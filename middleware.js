@@ -8,7 +8,7 @@ export function middleware(request) {
     return NextResponse.next()
   }
 
-  if (hostname === 'app.retainkit.io') {
+  if (hostname === 'app.retainkit.app') {
     if (pathname === '/') {
       const token = request.cookies.get('ret_token')?.value
       if (token) {
@@ -20,11 +20,11 @@ export function middleware(request) {
     return NextResponse.next()
   }
 
-  if (hostname === 'retainkit.io' || hostname === 'www.retainkit.io') {
+  if (hostname === 'retainkit.app' || hostname === 'www.retainkit.app') {
     if (pathname.startsWith('/dashboard') || pathname.startsWith('/billing') ||
         pathname.startsWith('/generate') || pathname.startsWith('/login') ||
         pathname.startsWith('/signup')) {
-      return NextResponse.redirect(new URL('https://app.retainkit.io' + pathname, request.url))
+      return NextResponse.redirect(new URL('https://app.retainkit.app' + pathname, request.url))
     }
   }
 

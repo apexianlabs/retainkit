@@ -50,8 +50,8 @@ function GeneratePageInner() {
         {user && <Link href="/dashboard" style={{fontSize:13,color:'#64748b',textDecoration:'none'}}>Dashboard</Link>}
       </nav>
       <div style={{maxWidth:640,margin:'0 auto',padding:'40px 24px'}}>
-        <h1 style={{fontSize:26,fontWeight:800,color:'#0f172a',marginBottom:6}}>Generate with AI</h1>
-        <p style={{fontSize:14,color:'#64748b',marginBottom:28}}>Fill in the details below.</p>
+        <h1 style={{fontSize:26,fontWeight:800,color:'#0f172a',marginBottom:6}}>Generate retention response</h1>
+        <p style={{fontSize:14,color:'#64748b',marginBottom:28}}>Enter the cancellation details to generate a win-back message.</p>
 
         {error && <div style={{background:'#fef2f2',border:'1px solid #fecaca',borderRadius:10,padding:'12px 16px',fontSize:13,color:'#dc2626',marginBottom:20}}>{error}</div>}
 

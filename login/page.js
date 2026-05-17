@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
-const GOOGLE_AUTH_URL = `https://wdeilbhnsdlmckovicqy.supabase.co/auth/v1/authorize?provider=google&redirect_to=https%3A%2F%2Fapp.retainkit.io%2Fauth%2Fcallback&scopes=email+profile`
+const GOOGLE_AUTH_URL = `https://wdeilbhnsdlmckovicqy.supabase.co/auth/v1/authorize?provider=google&redirect_to=https%3A%2F%2Fapp.retainkit.app%2Fauth%2Fcallback&scopes=email+profile`
 
 export default function LoginPage() {
   const router = useRouter()
@@ -64,9 +64,7 @@ export default function LoginPage() {
     <div style={{width:420,flexShrink:0,background:'#be185d',display:'flex',flexDirection:'column',padding:'40px',position:'relative',overflow:'hidden'}}>
       <div style={{position:'absolute',top:-80,right:-60,width:280,height:280,borderRadius:'50%',background:'rgba(255,255,255,0.08)'}}/>
       <Link href="/" style={{display:'flex',alignItems:'center',gap:10,marginBottom:48,zIndex:1,textDecoration:'none'}}>
-        <div style={{width:36,height:36,borderRadius:8,background:'rgba(255,255,255,0.2)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:18,fontWeight:800,color:'#fff'}}>
-          R
-        </div>
+        <div style={{width:36,height:36,borderRadius:8,background:'rgba(255,255,255,0.2)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:18,fontWeight:800,color:'#fff'}}>R</div>
         <span style={{fontSize:20,fontWeight:800,color:'#fff'}}>RetainKit</span>
       </Link>
       <div style={{zIndex:1,marginBottom:40}}>
