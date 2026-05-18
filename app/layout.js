@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'RetainKit — Win back churning customers with AI',
-  description: 'Win back churning customers with AI',
+  title: 'RetainKit — Enter the cancellation reason and get a professional, empathetic retention response in seconds.',
+  description: 'Enter the cancellation reason and get a professional, empathetic retention response in seconds.',
 }
 export default function RootLayout({ children }) {
   return (
