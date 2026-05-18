@@ -8,7 +8,7 @@ const DB_API_KEY = process.env.DB_API_KEY_RETAINKIT
 export async function POST(request) {
   try {
     const body = await request.json()
-    const { userId, ...inputs } = body
+    const { userId, product_name, customer_name, cancel_reason, tenure, plan, usage_stats } = body
 
     // Call AI API
     const aiRes = await fetch(`${AI_API_URL}/api/process`, {
