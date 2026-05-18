@@ -28,7 +28,7 @@ export async function POST(request) {
         const dbRes = await fetch(`${DB_API_URL}/db/retainkit/responses`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${DB_API_KEY}` },
-          body: JSON.stringify({ user_id: userId, result_data: result, status: 'complete', ...inputs })
+          body: JSON.stringify({ user_id: userId, title: `${customer_name} — ${cancel_reason}`, customer_name, cancel_reason, result_data: result, status: 'complete' })
         })
         const dbData = await dbRes.json()
         itemId = dbData.data?.id || null
