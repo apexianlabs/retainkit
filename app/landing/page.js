@@ -2,16 +2,18 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-const Logo = ({ size = 32, color = '#be185d', initial = 'R' }) => (
+const Logo = ({ size = 32 }) => (
   <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor={color} stopOpacity="0.9"/>
-        <stop offset="100%" stopColor={color} stopOpacity="0.6"/>
+      <linearGradient id="rk1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stopColor="#f472b6"/>
+        <stop offset="100%" stopColor="#9d174d"/>
       </linearGradient>
     </defs>
-    <rect width="100" height="100" rx="22" fill="url(#lg1)"/>
-    <text x="50" y="68" textAnchor="middle" fontSize="52" fontWeight="900" fontFamily="Arial,sans-serif" fill="white">{initial}</text>
+    <path d="M50 80 C50 80 15 58 15 35 C15 24 24 15 35 15 C42 15 48 19 50 24 C52 19 58 15 65 15 C76 15 85 24 85 35 C85 58 50 80 50 80Z" fill="url(#rk1)"/>
+    <rect x="38" y="44" width="24" height="18" rx="4" fill="white" opacity="0.9"/>
+    <path d="M43 44 L43 38 Q43 32 50 32 Q57 32 57 38 L57 44" stroke="white" strokeWidth="3.5" fill="none" strokeLinecap="round" opacity="0.9"/>
+    <circle cx="50" cy="52" r="3" fill="#be185d"/>
   </svg>
 )
 
