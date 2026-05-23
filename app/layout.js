@@ -1,4 +1,5 @@
 export const metadata = {
+  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   title: 'RetainKit — Enter the cancellation reason and get a professional, empathetic retention response in seconds.',
   description: 'Enter the cancellation reason and get a professional, empathetic retention response in seconds.',
 }
