@@ -3,6 +3,17 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
+const Logo = ({ size = 32 }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#f472b6"/><stop offset="100%" stopColor="#9d174d"/></linearGradient></defs>
+    <path d="M50 80 C50 80 15 58 15 35 C15 24 24 15 35 15 C42 15 48 19 50 24 C52 19 58 15 65 15 C76 15 85 24 85 35 C85 58 50 80 50 80Z" fill="url(#lg)"/>
+    <rect x="38" y="44" width="24" height="18" rx="4" fill="white" opacity="0.9"/>
+    <path d="M43 44 L43 38 Q43 32 50 32 Q57 32 57 38 L57 44" stroke="white" strokeWidth="3.5" fill="none" strokeLinecap="round" opacity="0.9"/>
+    <circle cx="50" cy="52" r="3" fill="#be185d"/>
+  </svg>
+)
+
+
 const GOOGLE_AUTH_URL = `https://wdeilbhnsdlmckovicqy.supabase.co/auth/v1/authorize?provider=google&redirect_to=https%3A%2F%2Fapp.retainkit.app%2Fauth%2Fcallback&scopes=email+profile`
 
 export default function LoginPage() {
@@ -74,7 +85,7 @@ export default function LoginPage() {
     <div style={{width:420,flexShrink:0,background:'#be185d',display:'flex',flexDirection:'column',padding:'40px',position:'relative',overflow:'hidden'}}>
       <div style={{position:'absolute',top:-80,right:-60,width:280,height:280,borderRadius:'50%',background:'rgba(255,255,255,0.08)'}}/>
       <Link href="/" style={{display:'flex',alignItems:'center',gap:10,marginBottom:48,zIndex:1,textDecoration:'none'}}>
-        <div style={{width:36,height:36,borderRadius:8,background:'rgba(255,255,255,0.2)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:18,fontWeight:800,color:'#fff'}}>R</div>
+        <Logo size={36}/>
         <span style={{fontSize:20,fontWeight:800,color:'#fff'}}>RetainKit</span>
       </Link>
       <div style={{zIndex:1,marginBottom:40}}>
@@ -99,7 +110,7 @@ export default function LoginPage() {
         <div style={{width:'100%',maxWidth:400}}>
           {isMobile && (
             <Link href="/" style={{display:'flex',alignItems:'center',gap:8,marginBottom:24,textDecoration:'none',justifyContent:'center'}}>
-              <div style={{width:32,height:32,borderRadius:8,background:'#be185d',display:'flex',alignItems:'center',justifyContent:'center',fontSize:14,fontWeight:800,color:'#fff'}}>R</div>
+              <Logo size={36}/>
               <span style={{fontWeight:800,fontSize:18,color:'#0f172a'}}>RetainKit</span>
             </Link>
           )}
